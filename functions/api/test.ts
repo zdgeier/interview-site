@@ -2,7 +2,7 @@
 export async function main(argumentJson) {
     return {
         "body": `      
-        <!DOCTYPE html>
+            <!DOCTYPE html>
             <html lang="en">
             <head>
             </head>
@@ -16,10 +16,10 @@ export async function main(argumentJson) {
             </body>
             </html>
         `,
-        "statusCode": 200,
+        "statusCode": 401,
         "headers": {
             "Cache-control": "no-store",
-            "X-Yext-Test": "Example header",
+            "WWW-Authenticate": "Basic realm=\"User Visible Realm\""
         },
       };
  }
