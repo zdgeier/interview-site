@@ -1,6 +1,6 @@
 export async function main(argumentJson) {
     const authHeader = argumentJson["headers"]["Authorization"]
-    if(authHeader && authHeader == "dGVzdDp0ZXN0") {
+    if(authHeader) {
         return {
             "body": `      
                 <!DOCTYPE html>
@@ -11,6 +11,7 @@ export async function main(argumentJson) {
                     <div style=" margin-top: 10%; margin-left: 30%; text-align: center;">
                         <body>
                             <h1>Nice</h1>
+                            <p>${JSON.stringify(argumentJson['headers'])}</p>
                         </body>
                     </div>
                 </body>
