@@ -34,7 +34,8 @@ export async function main(argumentJson) {
                 <div style=" margin-top: 10%; margin-left: 30%; text-align: center;">
                     <body>
                         <h1>Hello, bot!</h1>
-                        <p>${authHeader}</p>
+                        <p>${JSON.stringify(argumentJson)}</p>
+                        <p>${JSON.stringify(argumentJson['headers'])}</p>
                         <p>You failed to create a new sport, replicant scum.</p>
                     </body>
                 </div>
