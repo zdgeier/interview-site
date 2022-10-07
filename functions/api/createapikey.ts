@@ -12,7 +12,7 @@ export async function main(argumentJson) {
                     <div style=" margin-top: 10%; margin-left: 30%; text-align: center;">
                         <body>
                             <h1>Yext Games</h1>
-                            <form>
+                            <form action="/apikey" method="get">
                                 <label>Interviewee Name:</label>
                                 <input class="inputfield" type="text" name="name"/>
                             </form>
