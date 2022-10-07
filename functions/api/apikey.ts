@@ -16,27 +16,27 @@ function generateUUID() { // Public Domain/MIT
 }
 export async function main(argumentJson) {
     if(argumentJson["headers"]["Authorization"] && argumentJson["headers"]["Authorization"] == "dGVzdDp0ZXN0") {
-        const url = argumentJson["requestUrl"];
-        const questionMark = url.indexOf("?");
-        const urlParams = new URLSearchParams(url.substring(questionMark));
+        // const url = argumentJson["requestUrl"];
+        // const questionMark = url.indexOf("?");
+        // const urlParams = new URLSearchParams(url.substring(questionMark));
 
-        const postUrl = 'https://api.yext.com/v2/accounts/me/entities?api_key=29a2c9e1c9293a60a656f31d9a945ebe&entityType=ce_interviewee&v=20220808';
+        // const postUrl = 'https://api.yext.com/v2/accounts/me/entities?api_key=29a2c9e1c9293a60a656f31d9a945ebe&entityType=ce_interviewee&v=20220808';
         const apiKey = generateUUID();
-        const data = {
-            "name":  urlParams.get("name"), 
-            "c_apiKey": apiKey,
-        }
-        const response = await fetch(postUrl, {
-            method: 'POST',
-            mode: 'cors',
-            cache: 'no-cache',
-            credentials: 'same-origin',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            redirect: 'follow',
-            body: JSON.stringify(data),
-        });
+        // const data = {
+        //     "name":  urlParams.get("name"), 
+        //     "c_apiKey": apiKey,
+        // }
+        // const response = await fetch(postUrl, {
+        //     method: 'POST',
+        //     mode: 'cors',
+        //     cache: 'no-cache',
+        //     credentials: 'same-origin',
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     },
+        //     redirect: 'follow',
+        //     body: JSON.stringify(data),
+        // });
         return {
             "body": `      
             <!DOCTYPE html>
