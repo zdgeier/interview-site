@@ -1,3 +1,4 @@
+
 export async function main(argumentJson) {
     const authHeader = argumentJson["headers"]["Authorization"]
     if(authHeader && authHeader == "Basic dGVzdDp0ZXN0") {
@@ -10,7 +11,11 @@ export async function main(argumentJson) {
                 <body>
                     <div style=" margin-top: 10%; margin-left: 30%; text-align: center;">
                         <body>
-                            <h1>Nice</h1>
+                            <h1>Yext Games</h1>
+                            <form>
+                                <label>Interviewee Name:</label>
+                                <input class="inputfield" type="text" name="name"/>
+                            </form>
                         </body>
                     </div>
                 </body>
@@ -33,10 +38,7 @@ export async function main(argumentJson) {
             <body>
                 <div style=" margin-top: 10%; margin-left: 30%; text-align: center;">
                     <body>
-                        <h1>Hello, bot!</h1>
-                        <p>${JSON.stringify(argumentJson)}</p>
-                        <p>${JSON.stringify(argumentJson['headers'])}</p>
-                        <p>You failed to create a new sport, replicant scum.</p>
+                        Unauthorized
                     </body>
                 </div>
             </body>
